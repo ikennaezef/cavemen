@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"
+    integrity="sha512-VEBjfxWUOyzl0bAwh4gdLEaQyDYPvLrZql3pw1ifgb6fhEvZl9iDDehwHZ+dsMzA0Jfww8Xt7COSZuJ/slxc4Q=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"
+    integrity="sha512-dLxUelApnYxpLt6K2iomGngnHO83iUvZytA3YjDUCjT0HDOHKXnVYdf3hU4JjM8uEhxf9nD1/ey98U3t2vZ0qQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <link rel="stylesheet" href="https://unpkg.com/kursor/dist/kursor.css">
+  <link rel="stylesheet" href="css/index.css">
+  <title>The Cavemen</title>
+</head>
+
+<body>
+  <div class="wrapper">
+    <main>
+      <div class="title">
+        <span class="line line-1"></span>
+        <h1 class="title__main">THE CAVEMEN</h1>
+        <span class="line line-2"></span>
+      </div>
+
+      <div class="intro">
+        <h5>Life about a Nigerian Highlife band consisting of sibling duo Kingsley Okorie, a bassist and Benjamin James,
+          a drummer.</h5>
+        <p>The Cavemen are natives of Orlu, Imo State and started out as choristers.</p>
+      </div>
+
+      <div class="showcase">
+        <img src="images/Star 3.svg" alt="star" class="star">
+        <!-- <img src="images/home_image.png" alt="The cavemen" /> -->
+        <div class="image__container"></div>
+        <nav>
+          <ul class="nav__links">
+            <li>
+              <a href="#">Home</a>
+            </li>
+            <li>
+              <a href="#">Shows</a>
+            </li>
+            <li>
+              <a href="#">Music</a>
+            </li>
+            <li>
+              <a href="#">Videos</a>
+            </li>
+            <li>
+              <a href="#">Gallery</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="highlights">
+        <div class="perform">
+          <img src="images/Star 1.svg" alt="star" class="star">
+          <p>They performed at the finale show of <br> the 5th season of Big Brother Naija.</p>
+        </div>
+        <div class="award">
+          <img src="images/Star 2.svg" alt="star" class="star">
+          <p>Won the 2020 Headies Award for the Best <br> Alternative Album - <span>Roots</span>.</p>
+        </div>
+      </div>
+    </main>
+  </div>
+  <!-- <script src="https://unpkg.com/kursor"></script> -->
+  <!-- <script src="js/kursor.js"></script> -->
+  <script src="js/hover-effect.umd.js"></script>
+  <script src="js/index.js"></script>
+  <script>
+    let showcase = new hoverEffect({
+      parent: document.querySelector('.image__container'),
+      intensity: 0.3,
+      imagesRatio: 200 / 250,
+      image1: './images/home_image.png',
+      image2: './images/home_image_2.png',
+      displacementImage: './images/7.jpg'
+    })
+  </script>
+</body>
+
+</html>
