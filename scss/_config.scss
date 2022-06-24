@@ -35,3 +35,26 @@ $colors: (
   @return map-get($colors, $key);
 }
 
+
+$mobile: 550px;
+$tablet: 769px;
+$notebook: 1024px;
+
+@mixin mobile {
+  @media (max-width: #{$mobile}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: #{$tablet}) {
+    @content;
+  }
+}
+
+@mixin notebook {
+  @media (max-width: #{$notebook}) {
+    @content;
+  }
+}
+
