@@ -31,12 +31,14 @@ function contentAnimation() {
     }
   }).from('.album__roots img', 1, {
     'clip-path': 'polygon(0 100%, 100% 100%, 100% 100%, 0% 100%)',
+    ease: 'power2.out',
   }).from('.album__roots #songs', 1, {
     opacity: 0
   }).from('.album__love #songs', 1, {
     opacity: 0
   }).from('.album__love img', 1, {
     'clip-path': 'polygon(0 0, 100% 0, 100% 0%, 0 0%)',
+    ease: 'power2.out',
   })
 }
 

@@ -77,35 +77,17 @@ function contentAnimation() {
     }
   }).from('.album__roots img', 1, {
     'clip-path': 'polygon(0 100%, 100% 100%, 100% 100%, 0% 100%)',
+    ease: 'power2.out',
   }).from('.album__roots #songs', 1, {
     opacity: 0
   }).from('.album__love #songs', 1, {
     opacity: 0
   }).from('.album__love img', 1, {
     'clip-path': 'polygon(0 0, 100% 0, 100% 0%, 0 0%)',
+    ease: 'power2.out',
   })
 
   console.clear();
-}
-
-function musicPageAnimation() {
-  let tl1 = gsap.timeline();
-
-  tl1.from(['header h1', 'header .nav'], 1, {
-    opacity: 0,
-    y: 50,
-    stagger: {
-      amount: 0.3
-    }
-  }).from('.album__roots img', 1, {
-    'clip-path': 'polygon(0 100%, 100% 100%, 100% 100%, 0% 100%)',
-  }).from('.album__roots #songs', 1, {
-    opacity: 0
-  }).from('.album__love #songs', 1, {
-    opacity: 0
-  }).from('.album__love img', 1, {
-    'clip-path': 'polygon(0 100%, 100% 100%, 100% 100%, 0% 100%)',
-  })
 }
 
 
@@ -134,12 +116,6 @@ barba.init({
 
     async once(data) {
       contentAnimation();
-    }
-  }],
-  views: [{
-    namespace: 'music',
-    afterEnter(data) {
-      musicPageAnimation();
     }
   }]
 })
