@@ -32,7 +32,7 @@ function contentAnimation() {
 
   let tl = new gsap.timeline();
 
-  tl.from('.title__main', 1.2, {
+  tl.from('.title div', 1.2, {
     delay: 1.5,
     opacity: 0,
     'clip-path': 'polygon(0 100%, 100% 100%, 100% 100%, 0% 100%)'
@@ -118,4 +118,12 @@ barba.init({
       contentAnimation();
     }
   }]
+})
+
+
+const menuBtn = document.querySelector('#menu-btn');
+const nav = document.querySelector('nav');
+
+menuBtn.addEventListener('click', () => {
+  nav.classList.toggle('active');
 })
