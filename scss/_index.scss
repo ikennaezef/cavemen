@@ -50,14 +50,10 @@ main {
     }
 
     #menu-btn {
-      position: absolute;
-      top: 1.7rem;
-      right: 1rem;
       display: flex;
       flex-direction: column;
       gap: 0.3rem;
       border: none;
-      z-index: 100;
 
       .bar {
         width: 1.5rem;
@@ -171,6 +167,24 @@ main {
 
   nav {
 
+    button {
+      padding: 0.4rem;
+      border: none;
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      cursor: pointer;
+      background: transparent;
+
+      img {
+        width: 36px;
+      }
+
+      @media(min-width: 600px) {
+        display: none;
+      }
+    }
+
     .nav__links {
       li {
         line-height: 1.8;
@@ -196,16 +210,15 @@ main {
           }
   
           @include mobile {
-            font-size: 1.5rem;
+            font-size: 1.6rem;
           }
         }
       }
   
     }
-    
-    background-color: #eeeeee;
   
     @include mobile {
+      background-color: #eeeeee;
       position: absolute;
       top: 0;
       right: -100%;
