@@ -11,9 +11,9 @@ tl.from('.logo', 3, {
   x: 20,
   ease: "back.out(2)",
   stagger: {
-    amount: 0.6
+    amount: 0.7
   }
-}, '-=2.5').from('.benji-text p', 1, {
+}, '-=2').from('.benji-text p', 1, {
   y: 30,
   opacity: 0
 }, '-=0.5').from('.nav__link', 2, {
@@ -39,7 +39,7 @@ const okorieAnimation = () => {
     x: 20,
     ease: "back.out(2)",
     stagger: {
-      amount: 0.6
+      amount: 0.7
     }
   }, '-=1').from('.okorie-text p', 1, {
     y: 30,
@@ -55,3 +55,41 @@ const changeAnimation = () => {
 
   okorieAnimation();
 }
+
+const links = document.querySelectorAll('.nav__link');
+links.forEach((link, index) => {
+  link.addEventListener('mouseenter', () => {
+    let linkTl = gsap.timeline();
+
+    linkTl.to(`.link__${index+1} img`, 1.2, {
+      scale: 1.3,
+      ease: "back.out(2)",
+    }).to(`.link__${index+1} .link-text span`, 0.8, {
+      opacity: 1,
+      y: -30,
+      x: -20,
+      ease: "back.out(2)",
+      stagger: {
+        amount: 0.7
+      }
+    }, "-=1.5")
+  })
+
+  link.addEventListener('mouseleave', () => {
+    let linkLeaveTL = gsap.timeline();
+
+    linkLeaveTL.to(`.link__${index+1} .link-text span`, 0.8, {
+      opacity: 0,
+      y: 0,
+      x: 0,
+      ease: "back.out(2)",
+      stagger: {
+        amount: 0.6
+      }
+    }).to(`.link__${index+1} img`, 1, {
+      scale: 1,
+    }, "-=2")
+  })
+
+  
+})
