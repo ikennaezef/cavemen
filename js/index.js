@@ -43,7 +43,38 @@ const okorieAnimation = () => {
     }
   }, '-=1').from('.okorie-text p', 1, {
     y: 30,
-    opacity: 0
+    opacity: 0,
+    onComplete() {
+      setTimeout(benjiAnimation, 5000)
+    },
+  }, '-=0.5')
+}
+
+const benjiAnimation = () => {
+  let tl = gsap.timeline();
+
+  const benji = document.querySelector('.benji');
+  const okorie = document.querySelector('.okorie');
+  benji.classList.remove('hide');
+  okorie.classList.remove('show');
+
+  tl.from('.benji img', 3.5, {
+    opacity: 0,
+  }, '-=0.5').from('.benji-text h2 span', 1, {
+    scale: 0.5,
+    opacity: 0,
+    y: 30,
+    x: 20,
+    ease: "back.out(2)",
+    stagger: {
+      amount: 0.7
+    }
+  }, '-=1.5').from('.benji-text p', 1, {
+    y: 30,
+    opacity: 0, 
+    onComplete() {
+      setTimeout(changeAnimation, 5000)
+    }
   }, '-=0.5')
 }
 
