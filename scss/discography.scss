@@ -7,9 +7,8 @@ body {
 
 .wrapper {
 	position: relative;
-	max-width: 1200px;
+	// max-width: 1200px;
 	margin: 0 auto;
-	padding: 0 1rem;
 
 	&::after {
 		content: "";
@@ -36,6 +35,7 @@ header {
 	justify-content: space-between;
 	gap: 2rem;
 	margin-bottom: 8rem;
+	padding: 0 2rem;
 
 	.album-text {
 		.album-title {
@@ -59,6 +59,50 @@ header {
 	.album-image {
 		img {
 			width: 25rem;
+		}
+	}
+}
+
+.slide-container {
+	background: url("../assets/images/slide_bg.png") repeat center center/cover;
+	border: 2px solid red;
+	position: relative;
+	padding-left: 2rem;
+	padding-top: 18rem;
+	width: 100%;
+
+	margin-bottom: 10rem;
+	// height: 100vh;
+
+	overscroll-behavior: none;
+
+	.slide-inner {
+		display: flex;
+		align-items: center;
+		// gap: 4rem;
+		flex-wrap: nowrap;
+		overscroll-behavior: none;
+		height: 100%;
+		width: 300%;
+
+		.project {
+			min-width: 40vw;
+
+			img {
+				width: 15rem;
+				margin-bottom: 1rem;
+			}
+
+			h4 {
+				font-family: "Monday HandBrush";
+				font-size: 2.5rem;
+				line-height: 1.2;
+				font-weight: 300;
+			}
+
+			p {
+				font-size: 1.2rem;
+			}
 		}
 	}
 }
