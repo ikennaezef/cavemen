@@ -37,16 +37,30 @@ header {
 	margin-bottom: 8rem;
 	padding: 0 2rem;
 
+	@include tablet {
+		flex-direction: column-reverse;
+		align-items: stretch;
+	}
+
 	.album-text {
+		width: 40%;
+		@include tablet {
+			width: 100%;
+		}
 		.album-title {
 			font-size: 5rem;
 			font-family: "Monday HandBrush";
 			font-weight: 400;
 			line-height: 1.5;
 			margin-bottom: 1rem;
+
+			@include tablet {
+				display: none;
+			}
 		}
 
 		.album-table {
+			width: 100%;
 			tr {
 				line-height: 1.5;
 				display: flex;
@@ -57,40 +71,70 @@ header {
 	}
 
 	.album-image {
+		clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
 		img {
 			width: 25rem;
+
+			@include tablet {
+				width: 100%;
+			}
+		}
+	}
+
+	.album-title.small {
+		display: none;
+		font-size: 2.8rem;
+		font-family: "Monday HandBrush";
+		text-align: center;
+		font-weight: 400;
+		line-height: 1;
+
+		@include tablet {
+			display: block;
 		}
 	}
 }
 
 .slide-container {
-	background: url("../assets/images/slide_bg.png") repeat center center/cover;
-	border: 2px solid red;
+	background: url("../assets/images/slide_bg.png") repeat-x center
+		center/contain;
 	position: relative;
-	padding-left: 2rem;
-	padding-top: 18rem;
+	padding: 4rem 1rem 10rem;
+	padding-top: 10rem;
 	width: 100%;
 
 	margin-bottom: 10rem;
-	// height: 100vh;
 
-	overscroll-behavior: none;
+	@include mobile {
+		background: url("../assets/images/slide_bg.png") repeat-x center
+			center/cover;
+		padding: 7rem 1rem;
+	}
 
 	.slide-inner {
 		display: flex;
 		align-items: center;
-		// gap: 4rem;
+		gap: 5rem;
 		flex-wrap: nowrap;
-		overscroll-behavior: none;
+		overflow-x: scroll;
 		height: 100%;
-		width: 300%;
+
+		&::-webkit-scrollbar {
+			display: none;
+		}
 
 		.project {
-			min-width: 40vw;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
 
 			img {
-				width: 15rem;
+				width: 25rem;
 				margin-bottom: 1rem;
+
+				@include mobile {
+					width: 15rem;
+				}
 			}
 
 			h4 {
@@ -98,10 +142,18 @@ header {
 				font-size: 2.5rem;
 				line-height: 1.2;
 				font-weight: 300;
+
+				@include mobile {
+					font-size: 1.8rem;
+				}
 			}
 
 			p {
 				font-size: 1.2rem;
+
+				@include mobile {
+					font-size: 1rem;
+				}
 			}
 		}
 	}

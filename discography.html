@@ -11,19 +11,35 @@
 			sizes="32x32"
 			href="assets/images/logo.svg"
 		/>
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"
+			integrity="sha512-VEBjfxWUOyzl0bAwh4gdLEaQyDYPvLrZql3pw1ifgb6fhEvZl9iDDehwHZ+dsMzA0Jfww8Xt7COSZuJ/slxc4Q=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		></script>
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/ScrollTrigger/1.0.5/ScrollTrigger.min.js"
+			integrity="sha512-m/n857VfrPYUcRvzCfqfrC9aMT06TQA2V0DcX/Ovovrhswa3038FfYmHlB0l/ZMukVyKWmiwZI4Pnnd7v3FwFQ=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		></script>
 		<title>The Cavemen - Discography</title>
 	</head>
 	<body>
 		<div class="wrapper">
 			<header id="header">
 				<div class="logo-wrapper">
-					<img src="assets/images/logo.svg" alt="The Cavemen" class="logo" />
+					<a href="index.html">
+						<img src="assets/images/logo.svg" alt="The Cavemen" class="logo" />
+					</a>
 				</div>
 			</header>
 
-			<div class="album-wrapper">
+			<div class="album-wrapper love-and-highlife">
 				<div class="album-text">
-					<h2 class="album-title">Love and Highlife</h2>
+					<h2 class="album-title">
+						<span>Love</span> <span>and</span> <span>Highlife</span>
+					</h2>
 					<table class="album-table">
 						<tr>
 							<td>Teach Me How To Love</td>
@@ -105,6 +121,9 @@
 						alt="love and higlife album cover"
 					/>
 				</div>
+				<h2 class="album-title small">
+					<span>Love</span> <span>and</span> <span>Highlife</span>
+				</h2>
 			</div>
 			<div class="album-wrapper">
 				<div class="album-text">
@@ -179,7 +198,57 @@
 				<div class="album-image">
 					<img src="assets/images/roots.png" alt="roots album cover" />
 				</div>
+				<h2 class="album-title small">Roots</h2>
+			</div>
+
+			<div class="slide-container">
+				<div class="slide-inner">
+					<div class="project">
+						<img src="assets/images/runaway.png" alt="runaway lady" />
+						<div>
+							<h4>Single: Runaway Lady</h4>
+							<p>March, 2018</p>
+						</div>
+					</div>
+					<div class="project">
+						<img src="assets/images/dance.png" alt="dance 4 me" />
+						<div>
+							<h4>Single: Dance 4 Me</h4>
+							<p>March, 2018</p>
+						</div>
+					</div>
+					<div class="project">
+						<img src="assets/images/bolo.png" alt="bolo bolo" />
+						<div>
+							<h4>Single: Bolo Bolo</h4>
+							<p>March, 2018</p>
+						</div>
+					</div>
+					<div class="project">
+						<img src="assets/images/runaway.png" alt="runaway lady" />
+						<div>
+							<h4>Single: Runaway Lady</h4>
+							<p>March, 2018</p>
+						</div>
+					</div>
+					<div class="project">
+						<img src="assets/images/dance.png" alt="dance 4 me" />
+						<div>
+							<h4>Single: Dance 4 Me</h4>
+							<p>March, 2018</p>
+						</div>
+					</div>
+					<div class="project">
+						<img src="assets/images/bolo.png" alt="bolo bolo" />
+						<div>
+							<h4>Single: Bolo Bolo</h4>
+							<p>March, 2018</p>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
+
+		<script src="js/discography.js"></script>
 	</body>
 </html>
